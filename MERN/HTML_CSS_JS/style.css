@@ -6,30 +6,52 @@
 Opacity - Alpha (0-1)
 **/
 
+:root {
+  --primary-color: teal;
+  --title: 5rem;
+}
+
+html {
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
 .heading-2 {
   /* color: rgb(10, 247, 112); */
   /* color: #3503cb; Hex */
   /* color: rgba(255, 0, 0, 0.5); */
-  color: #035151d8;
+  color: var(--primary-color);
   background-color: #00800050;
 }
 
 /* Font properties */
 
 .heading-2 {
-  font-family: "Helvetica";
-  font-size: 4rem;
-  font-weight: lighter;
+  font-family: "Poppins";
+  font-size: var(--title);
+  font-weight: bold;
   font-style: italic;
 }
 
+.heading-1 {
+  font-size: 3rem;
+  font-family: "Nunito";
+  font-weight: normal;
+}
+
 .heading-3 {
-  font-family: "Courier";
+  font-family: "Montserrat";
   font-size: 3rem;
   font-weight: normal;
 
   /* text gradient  */
-  background: linear-gradient(to right, red, blue, green, white);
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    blue,
+    green,
+    white
+  );
   background-clip: text;
   color: transparent;
 }
@@ -37,9 +59,15 @@ Opacity - Alpha (0-1)
 .gradient-box {
   height: 200px;
   width: 100%;
-  /* background-color: red; */
-  background: linear-gradient(to right, red 50%, blue, green, white);
-  /* background: radial-gradient(red, green, blue, white); */
+  /* background-color: darkred; */
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 50%,
+    blue,
+    green,
+    white
+  );
+  /* background: radial-gradient(darkred, green, blue, white); */
   /* background: linear-gradient(to right, #fc0012, #fbacac); */
 }
 
@@ -51,7 +79,7 @@ Opacity - Alpha (0-1)
   /* text-decoration: line-through; */
   text-decoration: overline;
   text-transform: capitalize; /* uppercase, lowercase, capitalize */
-  text-shadow: 2px 0 5px red; /* horizontal vertical spread color */
+  text-shadow: 2px 0 5px var(--primary-color); /* horizontal vertical spread color */
   letter-spacing: 5px;
   word-spacing: 10px;
 }
@@ -66,7 +94,7 @@ Opacity - Alpha (0-1)
 
 .box {
   height: 100px;
-  color: red;
+  color: darkred;
   background-color: bisque;
   width: 100px;
 
@@ -111,10 +139,277 @@ Opacity - Alpha (0-1)
 
 .card {
   height: 100px;
-  width: 100px;
+  width: 100%;
   background-color: darksalmon;
   border: 1px solid black;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+}
+
+.list {
+  list-style: square; /* disc, circle, square, none */
+}
+
+.list li:first-child {
+  color: darkred;
+}
+
+.list li:last-child {
+  color: green;
+}
+
+.list li:nth-child(2n) {
+  color: blue;
+}
+
+/* Unit properties: px (pixel), rem, em, in, cm, vh, vw  */
+/*
+rem: relative to root
+em: relative to parent
+*/
+.units {
+  background: none;
+  border: 2px solid;
+  font-size: 2cm;
+}
+
+.unit-box {
+  height: 100vh;
+  width: 50%;
+  background-color: bisque;
+  font-size: 10px;
+}
+
+.unit-box p {
+  font-size: 1.5rem;
+}
+
+.child-box {
+  height: 100px;
+  width: 50%;
+  background-color: aqua;
+  font-size: 15px;
+}
+
+/* Positional properties: static, relative, absolute, fixed, sticky */
+.positional-box {
+  height: 500px;
+  width: 500px;
+  background-color: gold;
+  position: relative;
+}
+
+.positional-child {
+  height: 200px;
+  width: 200px;
+  background-color: deeppink;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  z-index: 12;
+}
+
+.fixed-child {
+  height: 200px;
+  width: 200px;
+  background-color: lightsalmon;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  z-index: -1;
+}
+
+.sticky-child {
+  height: 200px;
+  width: 200px;
+  background-color: lightslategray;
+  position: sticky;
+  top: 0px;
+  right: 50px;
+  z-index: 0;
+}
+
+/** pseudo-class (fake class)**/
+
+.pseudo-click:hover {
+  color: darkred;
+}
+
+.pseudo-click:active {
+  color: green;
+}
+
+input {
+  border: 1px solid black;
+  outline: none;
+}
+
+input:hover {
+  border: 1px solid darkred;
+}
+
+input:focus {
+  border: 1px solid blue;
+}
+
+input:active {
+  border: 1px solid green;
+}
+
+input:disabled {
+  background-color: black;
+}
+
+#check {
+  color: darkred;
+  border: 1px solid darkred;
+  padding: 1rem;
+}
+
+/* Overflow properties  */
+.content {
+  font-size: 1rem;
+  font-weight: normal;
+  border: 1px solid;
+  background-color: bisque;
+  height: 500px;
+  width: 500px;
+  overflow: auto; /* visible, auto, scroll, hidden */
+}
+
+/* Table properties  */
+
+.users-table,
+.users-table th,
+.users-table td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+  padding: 5px;
+  width: 200px;
+}
+
+.users-table th {
+  color: white;
+  background-color: magenta;
+  text-align: left;
+}
+
+.users-table tr th:first-child,
+.users-table tr td:first-child {
+  width: 300px;
+}
+
+.users-table tr:nth-child(2n) td {
+  background-color: bisque;
+}
+
+/* Form properties  */
+
+.user-form {
+  background-color: #efefef;
+  padding: 1rem 3rem;
+  border: 1px solid #4c4d4f;
+  border-radius: 20px;
+  max-width: 50%;
+  margin: auto;
+}
+
+.user-form label {
+  font-size: 0.75rem;
+}
+
+.user-form textarea,
+.user-form select,
+.user-form input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.user-form input[type="color"] {
+  width: 50px;
+  padding: 0;
+  border-radius: 0;
+}
+
+.user-form input[type="radio"],
+.user-form input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+}
+
+.user-form button {
+  min-width: 200px;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.user-form .flex {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Grid properties */
+
+.grid-container {
+  border: 1px solid;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(auto, 180px)); */
+  row-gap: 1rem;
+  column-gap: 0.5rem;
+  grid-template-areas:
+    "four six eight ten"
+    "first first three five"
+    "two two two two"
+    "seven . nine .";
+}
+
+.grid-container .grid-box {
+  height: 100px;
+  max-width: 100%;
+  background-color: deepskyblue;
+}
+
+.grid-box.one {
+  grid-area: first;
+}
+
+.grid-box.two {
+  grid-area: two;
+}
+
+.grid-box.three {
+  grid-area: three;
+}
+.grid-box.four {
+  grid-area: four;
+}
+.grid-box.five {
+  grid-area: five;
+}
+.grid-box.six {
+  grid-area: six;
+}
+.grid-box.seven {
+  grid-area: seven;
+}
+.grid-box.eight {
+  grid-area: eight;
+}
+.grid-box.nine {
+  grid-area: nine;
+}
+.grid-box.ten {
+  grid-area: ten;
 }
