@@ -1,153 +1,60 @@
-HTML/CSS/JS
-World Wide Web (WWW)
-It is a system of interlinked documents, system accessed through internet, using web browser.
+### Usage
 
-Websites/Webapps are made up of HTML, CSS, JS.
+1. Inline
+2. Internal
+3. External (Recommended)
 
-Client-Server Model
-Client: The browser or app that sends requests to the server.
-Server: The machine that hosts the website/webapp, process the request of the client and sends responses (HTML, CSS, data).
+### Properties
 
-<hr/>
+- color
+- font
+- text
+- box-model: margin, padding, border, height, width
+- gradient
+- display
+- flex (flexbox)
+- list
+- units (px, rem, em, cm, in, vh, vw)
+- position
+- pseudo-class: hover, active, focus, child
+- overflow
+- table
+- form
+- grid
+- responsive
+- transformation - translate, rotate, skew, scale
+- transition
+- animation
+- background image
+- variables
+- google-fonts
+- flex grow, shrink
+- pseudo-element
 
-HTML (Hypertext Markup Language)
-HTML is the standard markup language for creating web pages.
+## Tailwind
 
-Text formatting elements/tags
-Headings -> <h1> - <h6>
-Paragraph -> <p>
-Bold -> <strong>
-Italics/Emphasize -> <em>
-Superscript -> <sup>
-Subscript -> <sub>
-Line break -> <br> (Not recommended, instead use CSS)
-Divider -> <hr>
+- Utility first CSS framework for rapidly building custom UI.
+- Instead of writing CSS selectors, we use predefined utility classes directly in HTML
 
-<pre>
-List elements
-Ordered list -> <ol>
-Unordered list -> <ul>
-List item -> <li>
+#### Features
 
-Links, media, iframe
-Hyperlink -> <a href="url">Click</a>
+1. Highly customizable
+2. Responsive design ready
+3. Works in dark mode
+4. Just in Time (JIT) compiler for faster builds
 
-Image -> <img src="path of image" alt=""/>
+- start from Position property
+- custom value
+- reusing styles
+- group class
+- dark mode
+- custom value: class-[value]
+- responsive
+  - sm: >=640px
+  - md: >=768px
+  - lg: >=1024px
+  - xl: >=1280px
+- dark mode => dark:class
+- reusing styles: @apply
 
-Video -> <video src="path of video"></video>
-
-Iframe -> <iframe/>
-
-Table
-<table>
-<tr>
-<td>
-<thead>
-<tbody>
-rowspan colspan
-
-Inline & Block elements
-Inline: Covers only required width. <a>, <img>, <span>, <video>, <input>
-
-Block: Covers full width. <h1>, <p>, <div>, <section>, <ul>
-
-Form & input
-<form>
-<input>
-<label>
-<textarea>
-<select>
-<option>
-<datalist>
-Attributes
-
-type, id, for, name, value, placeholder, required, disabled
-Number, Range: min, max
-Text, Password: minlength, maxlength
-Select: selected
-Input types
-text
-email
-number
-password
-date
-time
-date-time-local
-range (min, max, step)
-color
-tel
-radio (name)
-checkbox
-file (accept, multiple)
-search
-Semantics
-Convention, best practice of using appropriate HTML elements
-<header>
-<nav>
-</header>
-<main>
-<section> <aside>
-<section>
-</main>
-<footer>
-CSS (Cascading style sheet)
-CSS is a style sheet used to style and layout web pages/HTML - colors, fonts, spacing, position, animation, view.
-Syntax
-<selector> {
-    property: value;
-    ....
-}
-h1 {
-    color:red;
-    font-weight:bold;
-}
-
-Selectors
-Element: element name h1, p, div | Least priority
-Class: .class-name | mid-priority (use for styling)
-Id: #id-name | top-priority
-// element
-h1 {
-    // your styles
-}
-
-// class
-.myclass {
-    // your styles
-}
-
-// id
-#myid {
-    // your styles
-}
-
-Usage
-Inline
-Internal
-External (Recommended)
-Properties
-color
-font
-text
-box-model: margin, padding, border, height, width
-gradient
-display
-flex (flexbox)
-list
-units (px, rem, em, cm, in, vh, vw)
-position
-pseudo-class: hover, active, focus, child
-overflow
-table
-form
-grid
-responsive
-transformation - translate, rotate, skew, scale
-transition
-animation
-background image
-variables
-google-fonts
-flex grow, shrink
-pseudo-element
-JS (JavaScript)
+## JS (JavaScript)

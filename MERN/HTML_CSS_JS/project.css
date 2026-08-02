@@ -390,7 +390,7 @@ textarea {
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   border: 1px solid #d1d1d1;
-}
+} 
 
 form textarea {
   resize: vertical;
